@@ -1,0 +1,27 @@
+#include <iostream>
+using namespace std;
+int palindrome(char a[],int n){
+  int s=0,e=n-1;
+  while(s<=e){
+  if(a[s]>=49&&a[s]<=57&&a[e]>=49&&a[e]<=57){
+    if(a[s]!=a[e])
+      return 0;
+    else{
+      s++;
+      e--;
+    }
+  }
+    else{
+      s++;
+      e--;
+    }
+  }
+  return 1;
+}
+int main() {
+  char array[]={'5','?','3','6','&','6','?','3','5'};
+  int length=9;
+  cout<<"Result is:";
+  cout<<palindrome(array,length);
+  return 0;
+}
